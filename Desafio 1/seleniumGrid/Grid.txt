@@ -1,0 +1,47 @@
+1 - Abrir o prompt de comando:
+
+1.1 - Acessar a pasta aonde esta o jar do Grid:
+
+cd C:\Users\William Soares\eclipse-workspace\4YouSeeAutomationBDD\seleniumGrid
+
+1.2 - Em seguida subir o Grid:
+
+java -jar selenium-server-standalone-3.141.59.jar -role hub -hubConfig hubConfig.json
+
+1.3 - Acessar no browser, para verificar se o Grid subiu:
+
+Browser: http://localhost:4444/grid/console
+
+1.4 - Em seguida subir o outro no do Grid:
+
+cd C:\Users\William Soares\eclipse-workspace\4YouSeeAutomationBDD\seleniumGrid
+java -jar selenium-server-standalone-3.141.59.jar -role node -nodeConfig nodeConfigChrome.json
+
+1.5 - Em seguida subir o outro no do Grid:
+
+cd C:\Users\William Soares\eclipse-workspace\4YouSeeAutomationBDD\seleniumGrid
+java -jar selenium-server-standalone-3.141.59.jar -role node -nodeConfig nodeConfigFirefox.json
+
+2 - Montar JSon online:
+
+https://jsoneditoronline.org/
+
+3 - Documentacao Selenium Grid:
+
+https://github.com/SeleniumHQ/selenium/wiki/Grid2#configuring-the-nodes-by-json
+https://github.com/SeleniumHQ/selenium/blob/master/java/server/src/org/openqa/grid/common/defaults/DefaultHub.json
+https://github.com/SeleniumHQ/selenium/blob/master/java/server/src/org/openqa/grid/common/defaults/DefaultNodeWebDriver.json
+
+https://seleniumhq.github.io/docs/grid.html
+https://www.softwaretestinghelp.com/selenium-grid-selenium-tutorial-29/comment-page-1/#comment-406693
+https://www.softwaretestinghelp.com/selenium-grid-selenium-tutorial-29/
+https://www.guru99.com/introduction-to-selenium-grid.html
+
+4 - Linux
+
+java -jar selenium-server-standalone-3.141.59.jar -role node -nodeConfig nodeConfigChrome.json
+java -Dwebdriver.chrome.driver="" -jar selenium-server-standalone-3.141.59.jar -role node -nodeConfig nodeConfigChrome.json
+java -Dwebdriver.chrome.driver="C:/Users/William Soares/eclipse-workspace/4YouSeeAutomationBDD/drivers/chromedriver.exe" -jar selenium-server-standalone-3.141.59.jar -role node -nodeConfig nodeConfigChrome.json
+java -Dwebdriver.gecko.driver="C:/Users/William Soares/eclipse-workspace/4YouSeeAutomationBDD/drivers/geckodriver.exe" -jar selenium-server-standalone-3.141.59.jar -role node -nodeConfig nodeConfigFirefox.json
+-Dwebdriver.ie.driver
+-Dwebdriver.edge.driver

@@ -1,0 +1,90 @@
+{
+	"id": "4bd1a55c-4f61-37bd-6706-b8e359f08a53",
+	"name": "Desafio_Exercicio_Dois",
+	"description": "Collection destinada para exercício dois do desafio Noesis",
+	"order": [
+		"df444260-a803-2071-9c15-471cb876a3a1",
+		"a358f4df-da49-bfc0-5dd7-4600804c9786"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1582426271239,
+	"owner": "5997954",
+	"public": false,
+	"requests": [
+		{
+			"id": "a358f4df-da49-bfc0-5dd7-4600804c9786",
+			"headers": "",
+			"headerData": [],
+			"url": "http://www.omdbapi.com/?i={{ID_DO_FILME}}&apikey={{API_KEY_INVALID}}",
+			"queryParams": [
+				{
+					"key": "i",
+					"value": "{{ID_DO_FILME}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{API_KEY_INVALID}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"Status Response\"] = jsonData.Response === \"False\";\ntests[\"Mensagem Error\"] = jsonData.Error === \"Invalid API key!\";\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1582428125528,
+			"name": "Busca de filme inexistente",
+			"description": "Teste para validar a buscar de um filme inexistente.\n\n",
+			"collectionId": "4bd1a55c-4f61-37bd-6706-b8e359f08a53",
+			"responses": []
+		},
+		{
+			"id": "df444260-a803-2071-9c15-471cb876a3a1",
+			"headers": "",
+			"headerData": [],
+			"url": "http://www.omdbapi.com/?i={{ID_DO_FILME}}&apikey={{API_KEY}}",
+			"queryParams": [
+				{
+					"key": "i",
+					"value": "{{ID_DO_FILME}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{API_KEY}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"Titulo Do Filme\"] = jsonData.Title === \"The Social Network\";\ntests[\"Ano do Filme\"] = jsonData.Year === \"2010\";\ntests[\"Idioma do Filme\"] = jsonData.Language === \"English, French\";",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1582427528788,
+			"name": "Tiítulo do Filme - Ano do Filme - Idioma do Filme",
+			"description": "Teste para validar os seguintes resultados:\n\nTiítulo do Filme -\nAno do Filme -\nIdioma do Filme",
+			"collectionId": "4bd1a55c-4f61-37bd-6706-b8e359f08a53",
+			"responses": []
+		}
+	]
+}

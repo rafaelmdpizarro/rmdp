@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [SuiteTest]" parallel="tests">
+  <test thread-count="1" name="Test CHROME(failed)" parallel="tests">
+    <parameter name="ambiente" value="HOMOLOGACAO"/>
+    <parameter name="browser" value="CHROME"/>
+    <parameter name="tipoExecucao" value="LOCAL"/>
+    <classes>
+      <class name="runners.MainRunner">
+        <methods>
+          <include name="finalizartudo"/>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="iniciarTudo"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runners.MainRunner -->
+    </classes>
+  </test> <!-- Test CHROME(failed) -->
+</suite> <!-- Failed suite [SuiteTest] -->

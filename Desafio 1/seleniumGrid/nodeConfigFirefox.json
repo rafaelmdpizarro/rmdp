@@ -1,0 +1,25 @@
+{
+"capabilities": [
+{
+"browserName": "firefox",
+"maxInstances": 2,
+"webdriver.gecko.driver": ""
+}
+],
+"proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+"maxSession": 2,
+"port": 5556,
+"register": true,
+"registerCycle": 5000,
+"hub": "http://192.168.0.72:4444",
+"host": "192.168.0.72",
+"nodeStatusCheckTimeout": 5000,
+"nodePolling": 5000,
+"role": "node",
+"unregisterIfStillDownAfter": 60000,
+"downPollingLimit": 2,
+"debug": false,
+"servlets": [],
+"withoutServlets": [],
+"custom": {}
+}
